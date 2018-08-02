@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mealsters</title>
-
-    <!------------------------------->
-    <!--including jquery cdn--------->
-    <!------------------------------->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/hmac-md5.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+    <!--including firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/login.js"></script>
     <script src="cordova.js"></script>
     <script src="js/zepto.min.js"></script>
     <script src="js/nacl-util.min.js"></script>
@@ -20,35 +21,30 @@
     <script src="js/deploy.js"></script>
     <script src="js/analytic.js"></script>
 
-    <style media="screen">
-
-    body {
-        margin: 0;
-    }
-    video {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -10;
-    }
-    </style>
-
-    <script type="text/javascript">
-        $(function () {
-            setTimeout(function () {
-
-                document.location.href = "login.html";
-            },4800)
-        })
-    </script>
-
 </head>
 <body>
-    <video autoplay muted poster="header_img.png">
-        <source src="video/splash-screen.mp4" type="video/mp4">
-            <img src="header_img.png" alt="man playing guitar">
-        </video>
-    </body>
-    </html>
+    <div class="wrapper">
+        <div class="logo-container logo-container-anim">
+            <img class="logo logo-anim" src="images/mealsters-vertical.png" alt="Logo">
+        </div>
+        <form action="POST" class="signup_form ">
+            <input placeholder="Email Id" type="email" id="username" class="signup_form-anim" required>
+            <span class="error"></span>
+            <input placeholder="Password" type="password" id="password" class="signup_form-anim delay1" required>
+            <span class="passworderror"></span>
+            <button type="submit" class="submit signup_form-anim delay2">Login</button>
+            <div class="meta">
+                <div class="signup_form-anim delay3"><a href="signup.html">Forgot Your Password</a></div>
+                <div class="signup_form-anim delay4">
+                    <p>Don't have an account? <a href="signup.html"><b>Sign up</b></a></p>
+                </div>
+                <div class="guest signup_form-anim delay5">
+                </p><a href="tutorial.html"><b>Explore as a Guest</b></a></p>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</body>
+</html>
