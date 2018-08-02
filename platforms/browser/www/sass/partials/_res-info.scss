@@ -1,0 +1,257 @@
+.foodinfo {
+    min-height: 100vh;
+    height: 100%;
+    background-color: #F4F2EF;
+    position: relative;
+    // z-index: 2;
+
+    h2 {
+        margin: 0;
+        padding-top: 90px;
+        margin-left: 5vh;
+        color: white;
+        filter: drop-shadow(0px 3px 2px hsla(120,0%,0%,.5));
+    }
+}
+
+
+.foodinfo-image {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, hsla(120, 0, 0, .7), transparent), url("../1.jpg");
+    background-position: center;
+    display: block;
+    // z-index: 2;
+}
+
+.foodinfo-wrapper {
+    width: 90%;
+    margin: 20px auto;
+
+}
+
+
+/*******************************/
+/* Food Info Boxes             */
+/*******************************/
+.foodinfo-box-ingredients, .foodinfo-box-price, .foodinfo-box-restaurant {
+    height: auto;
+    background-color: white;
+    filter: drop-shadow(0px 3px 2px hsla(120,0%,0%,.1));
+    border-radius: 8px;
+    margin: 1rem 0;
+
+    /* Ingredients Box   */
+    .ingredients {
+        flex-wrap: wrap;
+        padding: 1rem 1rem 1.5rem 1rem;
+
+        a {
+            margin: .5rem .3rem;
+        }
+    }
+}
+
+// General settings for ICON+INFO information
+.name-icon-left {
+
+    img {
+        margin-top: 1rem;
+        max-width: 30px;
+        max-height: 30px;
+    }
+    h4 {
+        text-align: left;
+        margin-left: .5rem;
+        color: #C7C1BD;
+        font-weight: 400;
+    }
+}
+
+
+/* Price Box   */
+.foodinfo-box-price {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: .3rem;
+
+    .price-left {
+        display: flex;
+        // grid-template-columns: repeat(2, 1fr);
+        flex-direction: row;
+        padding: 1rem 1rem 1.5rem 2rem;
+
+
+    }
+
+    .price-right {
+
+        padding-right: 2rem;
+        padding-top: 1.5rem;
+        h3 {
+            font-family: $font__heading;
+            font-size: 2rem;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            line-height: 2rem;
+            color: #7B759B;
+        }
+        h4 {
+            text-align: right;
+            margin:0;
+            padding: 0;
+            font-size: .8rem;
+            color: #BAB7CB;
+        }
+    }
+}
+
+.foodinfo-box-contact {
+    height: auto;
+    margin: 1rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: .5rem;
+
+    .telephone, .website {
+        background: linear-gradient(to right, #F13A8D, #F87156);
+        padding: 1.5rem 0;
+
+        border-radius: 8px 0px 0px 8px;
+
+        filter: drop-shadow(0px 3px 2px hsla(120,0%,0%,.1));
+
+        img {
+            max-width: 50px;
+            max-height: 50px;
+            margin: 0 auto;
+            display: block;
+        }
+        h4 {
+            color: white;
+            margin: 0;
+            margin-top: .5rem;
+            text-align: center;
+            font-weight: 400;
+        }
+    }
+    .website {
+        border-radius: 0px 8px 8px 0px;
+        background: linear-gradient(to right, #F87156,#FFA721 );
+    }
+}
+
+
+.foodinfo-box-restaurant {
+    .restaurant-image {
+
+        background: linear-gradient(to top, hsla(120, 0, 0, .7), transparent), url("../images/res_bg.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 120px;
+        border-radius: 8px 8px 0px 0px;
+        position: relative;
+
+        h4 {
+            color: white;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 1.5rem;
+            left: 2rem;
+            // padding: 70px 2rem 0px 2rem;
+            font-family: $font__heading;
+            font-weight: 300;
+            font-size: 1.5rem;
+        }
+        h5 {
+            color: white;
+            margin: 0;
+            padding: 0;
+            padding-left: 2rem;
+            font-size: 1.1rem;
+            opacity: .8;
+            font-weight: 300;
+        }
+    }
+
+
+    .review {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: .3rem;
+
+        border-bottom: 2px solid #F0F0F0;
+
+        .review-left {
+            display: flex;
+            flex-direction: row;
+            padding: 1rem 1rem 1.5rem 2rem;
+
+
+        }
+        .review-right {
+            margin-top: 2.1rem;
+            display: flex;
+            justify-self: right;
+            padding-right: 1.9rem;
+
+            object {
+                margin: 0 .1rem;
+                height: 1.5rem;
+                display: block;
+                // margin: 0 auto;
+            }
+
+        }
+    }
+    .address, .hour {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: .3rem;
+
+        border-bottom: 2px solid #F0F0F0;
+
+        .address-left, .hour-left {
+            display: flex;
+            flex-direction: row;
+            padding: 1rem 1rem 1.5rem 2rem;
+        }
+        .address-right, .hour-right {
+
+            max-width: 120px;
+            text-align: right;
+            display: flex;
+            justify-self: right;
+            margin-right: 2rem;
+            margin-top: 1rem;
+            display: block;
+
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+
+            p:nth-of-type(2) {
+                color: #959595;
+            }
+        }
+
+        .hour-right {
+
+            margin-top: 1.5rem;
+
+            p:nth-of-type(1) {
+                color: #8FBA3D;
+            }
+        }
+
+    }
+
+
+}

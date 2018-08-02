@@ -1,0 +1,99 @@
+/*--------------------------------------------------------------
+## Define the main color violet red and its different shades
+--------------------------------------------------------------*/
+$color__violetred: #f2398e;
+//rgb(242,57,142)
+$color__violetred-dark: #ee0073;
+//rgb(238,0,115)
+$color__violetred-darker: #c50060;
+//rgb(197,0,96)
+$color__violetred-light: #f35aa0;
+//rgb(243,90,160)
+$color__violetred-lighter: #f396c0;
+//rgb(243,150,192)
+
+
+/*--------------------------------------------------------------
+## Define the main color web orange and its different shades
+--------------------------------------------------------------*/
+$color__weborange: #ffa800;
+//rgb(255,168,0)
+$color__weborange-dark: #ff9400;
+//rgb(255,148,0)
+$color__weborange-darker: #d57c00;
+//rgb(213,124,0)
+$color__weborange-light: #ffb632;
+//rgb(255,182,50)
+$color__weborange-lighter: #ffc765;
+//rgb(255,199,101)
+
+
+/*--------------------------------------------------------------
+## Define the support colors: blue, red and pink
+--------------------------------------------------------------*/
+$color__blue: #a493ff;
+//rgb(164,147,255)
+$color__blue-dark: #907bff;
+//rgb(144,123,255)
+$color__blue-darker: #7359ff;
+//rgb(115,89,255)
+
+$color__red: #f65762;
+//rgb(246,87,98)
+$color__red-dark: #f5434f;
+//rgb(245,67,79)
+$color__red-darker: #f41e2d;
+//rgb(244,30,45)
+
+$color__pink: #f58ca3;
+//rgb(245,140,163)
+$color__pink-dark: #f36f8c;
+//rgb(243,111,140)
+$color__pink-darker: #f0486d;
+//rgb(240,72,109)
+
+/*--------------------------------------------------------------
+## Define the colors black and white
+--------------------------------------------------------------*/
+$color__white: #e8e8e8;
+//rgb(232,232,232)
+$color__white-dark: #ccc;
+//rgb(204,204,204)
+$color__white-darker: #a3a3a3;
+//rgb(163,163,163)
+$color__white-light: #f2f2f2;
+//rgb(242,242,242)
+$color__white-lighter: #fff;
+//rgb(255,255,255)
+$color__black: #2d2d2d;
+//rgb(45,45,45)
+$color__black-dark: #1a1a1a;
+//rgb(26,26,26)
+$color__black-darker: #000;
+//rgb(0,0,0)
+$color__black-light: #696969;
+//rgb(105,105,105)
+$color__black-lighter: #ababab;
+//rgb(171,171,171)
+
+$color__background-header: #fff;
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: royalblue;
+$color__link-visited: purple;
+$color__link-hover: midnightblue;
+$color__text-main: #404040;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;

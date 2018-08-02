@@ -1,0 +1,159 @@
+body.tutorial{
+    // background-color: white;
+    color:black;
+    background: linear-gradient(to top, white, transparent 100%), linear-gradient(to right, $color__violetred, $color__weborange);
+    background-size: 100vw 10vh, 100vw 10vh;
+    background-repeat: no-repeat;
+    // background: white;
+
+    // background: linear-gradient(rgba(242, 57, 142,1), rgba(255, 168, 0,1), white 30%);
+    max-height:100vh;
+    position: relative;
+
+    animation-name: body-tutorial;
+    animation-duration: .7s;
+    animation-delay: .3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+
+@keyframes body-tutorial {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+
+.tutorial-images {
+    padding-top: 10vh;
+    height: 100vh;
+    position: relative;
+
+    img {
+        max-width: 80vw;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .slick-active {
+
+        .tutorial-title {
+            animation-name: tutorial-anim-img;
+            animation-duration: .5s;
+            animation-delay: .1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            opacity: 0;
+        }
+        p {
+            animation-name: tutorial-anim-img;
+            animation-duration: .5s;
+            animation-delay: .2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            opacity: 0;
+        }
+
+        a {
+            animation-name: tutorial-anim-img;
+            animation-duration: .5s;
+            animation-delay: .3s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            opacity: 0;
+        }
+
+
+    }
+
+
+    .slick-dots {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 20vw;
+        margin: 0 auto;
+        list-style-type: none;
+        padding-left: 0;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        margin-left: -9vw;
+
+        button {
+            width: 10px;
+            height: 10px;
+            padding: 10px 10px;
+            background-color: lightgrey;
+            border: 0;
+            border-radius: 50%;
+            margin: 0;
+            padding: 0;
+        }
+        .slick-active {
+            animation-name: tutorial-anim-dots;
+            animation-duration: .5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            button {
+                background-color: $color__violetred;
+
+            }
+        }
+    }
+    @keyframes tutorial-anim-dots {
+        0% {
+            transform: translateY(-5px);
+        } 30% {
+            transition: translateY(50px);
+        } 100% {
+            transition: translateY(0px);
+        }
+    }
+    @keyframes tutorial-anim-img {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        } 100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .tutorial-title {
+        text-align: center;
+        font-family: $font__heading;
+        color: #333;
+        opacity: 0;
+    }
+    p {
+        max-width: 60vw;
+        color: #888;
+        margin: 0 auto;
+        font-size: .95rem;
+        text-align:center;
+        line-height: 1.7rem;
+        opacity: 0;
+    }
+
+    a {
+        opacity: 0;
+        border-radius: 10px;
+        display: block;
+        max-width: 80vh;
+        margin: 0vh 10vh;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        text-align: center;
+        font-family: 'Asap', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        background: linear-gradient(to right,#a493ff , #f2398e);
+        filter: drop-shadow(0px 5px 2px hsla(120,0%,0%,.2));
+    }
+
+
+}

@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Asap:400,700');
+
+.img_space{
+    height:65vh;
+    border-radius: 25px;
+    width:100%;
+    object-fit: cover;
+    margin: 50px auto 0 auto;
+    object-position: bottom;
+}
+.menu_icon{
+  text-align: left;
+  font-family: 'Asap', sans-serif;
+  padding-top: 30px;
+  color:white;
+  opacity:1;
+  align-self: center;
+  font-weight: 400;
+  font-size: 3.8rem;
+}
+.logo-container{
+  background-color: white;
+  height: 230px;
+  width: 150px;
+  margin: 0 auto;
+  position: relative;
+  top:-100px;
+  align-self: flex-start;
+  justify-content: center;
+  display: flex;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  flex-direction: column;
+}
+.signup .logo-container{
+  top:-116px;
+}
+.page-heading{
+  margin:10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+h3 {
+    line-height: 0.9rem;
+}
+button.next {
+    background-color: aquamarine;
+    height: 2rem;
+    width: 100%;
+    font-family: 'Asap', sans-serif;
+}
+body{
+  margin:0;
+  /* background-image: url("../images/salad.jpg"), linear-gradient(#ffa800, #f2398e); */
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to left, rgba(255, 168, 0,0.8), rgba(242, 57, 142,0.8)), url("../images/salad.jpg");
+  background-size: cover;
+  min-height:100vh;
+}
+body.main{
+  background-color: white;
+  color:black;
+  background: linear-gradient(rgba(242, 57, 142,1), rgba(255, 168, 0,1), white 30%);
+  min-height:100vh;
+}
+.main .wrapper{
+  height: auto;
+}
+/* header{
+  background: linear-gradient(to left, rgba(255, 168, 0,0.8), rgba(242, 57, 142,0.8));
+
+} */
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 720px;
+  height: 100vh;
+  align-content: flex-start;
+}
+
+.main h1{
+  font-family: 'Asap', sans-serif;
+  padding-top: 30px;
+  text-align: center;
+  color:white;
+  opacity:1;
+  font-weight: 400;
+  font-size: 3.8rem;
+}
+.logo{
+  margin: 0px auto;
+  margin-bottom: -70px;
+  width:100px;
+  height: auto;
+  align-self: flex-end;
+}
+.meta{
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(250,250,250,0.8);
+}
+.meta div{
+  padding: 10px;
+  line-height: 0.9rem;
+}
+form{
+  display:flex;
+  flex-direction: column;
+  width: 70vw;
+  max-width: 500px;
+  margin:0px auto;
+}
+
+input, label, .submit{
+  padding:18px;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0.2);
+  border:0px solid rgba(0,0,0,0.2);
+  margin: 10px;
+  font-size: 0.9rem;
+  border-radius: 15px;
+  color:white;
+}
+.submit {
+  font-family: 'Asap', sans-serif;
+  font-size: 1rem;
+  background: linear-gradient(to right,#a493ff , #f2398e);
+ }
+.submit:focus{
+  outline: none;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(250,250,250,0.8);
+    font-size: 0.8rem;
+}
+.error, .passworderror, .passwordlength{
+  color:white;
+  padding-left:10px;
+  font-size: 0.9rem;
+}
+
+.image{
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: rgba(250,250,250,0.8);
+}
+input:focus {
+    outline: none;
+    border: 1px solid rgba(250,250,250,0.8);
+}
+.signup_form{
+  margin-top: -50px;
+}
+
+/******************************************/
+/*                                        */
+/* INTERNAL PAGE (food & restaurant info) */
+/*                                        */
+/******************************************/
+/* Modifications: styling                 */
+/*                                        */
+/* by: Maggie                             */
+/******************************************/
+
+.fooditem {
+    background: #f2f2f2;
+}
+
+.info>* {
+    background-color: white;
+    margin: .5rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+}
+
+.info>*>* {
+    padding: 1rem 0;
+}
+
+.info .ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.info .ingredients span {
+    background-color: #a493ff; /* color blue */
+    color: white;
+
+    font-size: .8rem;
+    text-transform: uppercase;
+
+    padding: .2rem .5rem;
+    margin: .5rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.info .price {
+    display: flex;
+    align-items: baseline;
+    color: #7359ff; /* blue dark */
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.info .price:before {
+    content: url('../images/Assets/price-icon.png') 'PRICE';
+    font-size: .8rem;
+    color: #ababab; /* black lighter */
+    flex-grow: 1;
+    font-weight: 400;
+}
+
+.info .price:after {
+    content: "+ TAXES";
+    font-size: .8rem;
+    font-weight: 400;
+    color: #ababab; /* black lighter */
+}
+
+.info .res_call {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    background: linear-gradient(to right, #f2398e, #ffa800);
+    padding: 0;
+}
+
+.info .res_call a {
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.info .res_call .res_tel {
+    border-right: 5px solid white;
+}
+
+.res_info {
+    padding: 0;
+}
+
+.res_info>* {
+    padding: 0 2rem;
+    font-size: .8rem;
+    color: #ababab; /* black lighter */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
+    border-bottom: 1px solid #ababab;
+}
+
+.res_info .res_name {
+    /* height: 130px; */
+    font-size: 1.5rem;
+    background: rgba(0,0,0,0.5) url('../images/res_bg.jpg') center;
+    background-blend-mode: color;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    font-weight: 600;
+    line-height: 8;
+}
+
+.res_info .res_review {
+}
+
+.res_info img {
+    vertical-align: middle;
+}
+
+.res_info .res_address_text, .res_info .res_hour_text {
+    text-align: right;
+}
+
+.res_info .res_address_text span {
+    display: block;
+}
+
+
+
+
+
+/******************************************/
+/*           end of internal page         */
+/******************************************/
+
+nav ul{
+  margin: 150px 0 0 0;
+  padding: 0;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+  text-align: center;
+  height: 50px;
+}
+nav ul li img{
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 0;
+
+}
+header nav {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}

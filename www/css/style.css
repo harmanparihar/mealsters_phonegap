@@ -1,0 +1,1237 @@
+/*--------------------------------------------------------------
+## Define the main color violet red and its different shades
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Define the main color web orange and its different shades
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Define the support colors: blue, red and pink
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Define the colors black and white
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Asap:400,700");
+/*$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;*/
+.foodinfo {
+  min-height: 100vh;
+  height: 100%;
+  background-color: #F4F2EF;
+  position: relative;
+}
+.foodinfo h2 {
+  margin: 0;
+  padding-top: 90px;
+  margin-left: 5vh;
+  color: white;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.5));
+}
+
+.foodinfo-image {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent), url("../1.jpg");
+  background-position: center;
+  display: block;
+}
+
+.foodinfo-wrapper {
+  width: 90%;
+  margin: 20px auto;
+}
+
+/*******************************/
+/* Food Info Boxes             */
+/*******************************/
+.foodinfo-box-ingredients, .foodinfo-box-price, .foodinfo-box-restaurant {
+  height: auto;
+  background-color: white;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.1));
+  border-radius: 8px;
+  margin: 1rem 0;
+  /* Ingredients Box   */
+}
+.foodinfo-box-ingredients .ingredients, .foodinfo-box-price .ingredients, .foodinfo-box-restaurant .ingredients {
+  flex-wrap: wrap;
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+.foodinfo-box-ingredients .ingredients a, .foodinfo-box-price .ingredients a, .foodinfo-box-restaurant .ingredients a {
+  margin: .5rem .3rem;
+}
+
+.name-icon-left object {
+  margin-top: 1rem;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.name-icon-left h4 {
+  text-align: left;
+  margin-left: .5rem;
+  color: #C7C1BD;
+  font-weight: 400;
+}
+
+/* Price Box   */
+.foodinfo-box-price {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: .3rem;
+}
+.foodinfo-box-price .price-left {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1rem 1.5rem 2rem;
+}
+.foodinfo-box-price .price-right {
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+}
+.foodinfo-box-price .price-right h3 {
+  font-family: "asap", verdana, helvetica, arial, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  line-height: 2rem;
+  color: #7B759B;
+}
+.foodinfo-box-price .price-right h4 {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  font-size: .8rem;
+  color: #BAB7CB;
+}
+
+.foodinfo-box-contact {
+  height: auto;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: .5rem;
+}
+.foodinfo-box-contact .telephone, .foodinfo-box-contact .website {
+  background: linear-gradient(to right, #F13A8D, #F87156);
+  padding: 1.5rem 0;
+  border-radius: 8px 0px 0px 8px;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.1));
+}
+.foodinfo-box-contact .telephone object, .foodinfo-box-contact .website object {
+  max-width: 50px;
+  max-height: 50px;
+  margin: 0 auto;
+  display: block;
+}
+.foodinfo-box-contact .telephone h4, .foodinfo-box-contact .website h4 {
+  color: white;
+  margin: 0;
+  margin-top: .5rem;
+  text-align: center;
+  font-weight: 400;
+}
+.foodinfo-box-contact .website {
+  border-radius: 0px 8px 8px 0px;
+  background: linear-gradient(to right, #F87156, #FFA721);
+}
+
+.foodinfo-box-restaurant .restaurant-image {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url("../images/res_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  border-radius: 8px 8px 0px 0px;
+  position: relative;
+}
+.foodinfo-box-restaurant .restaurant-image h4 {
+  color: white;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+  font-family: "asap", verdana, helvetica, arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.foodinfo-box-restaurant .restaurant-image h5 {
+  color: white;
+  margin: 0;
+  padding: 0;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  opacity: .8;
+  font-weight: 300;
+}
+.foodinfo-box-restaurant .review {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: .3rem;
+  border-bottom: 2px solid #F0F0F0;
+}
+.foodinfo-box-restaurant .review .review-left {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1rem 1.5rem 2rem;
+}
+.foodinfo-box-restaurant .review .review-right {
+  margin-top: 2.1rem;
+  display: flex;
+  justify-self: right;
+  padding-right: 1.9rem;
+}
+.foodinfo-box-restaurant .review .review-right object {
+  margin: 0 .1rem;
+  height: 1.5rem;
+  display: block;
+}
+.foodinfo-box-restaurant .address, .foodinfo-box-restaurant .hour {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: .3rem;
+  border-bottom: 2px solid #F0F0F0;
+}
+.foodinfo-box-restaurant .address .address-left, .foodinfo-box-restaurant .address .hour-left, .foodinfo-box-restaurant .hour .address-left, .foodinfo-box-restaurant .hour .hour-left {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1rem 1.5rem 2rem;
+}
+.foodinfo-box-restaurant .address .address-right, .foodinfo-box-restaurant .address .hour-right, .foodinfo-box-restaurant .hour .address-right, .foodinfo-box-restaurant .hour .hour-right {
+  max-width: 180px;
+  text-align: right;
+  display: flex;
+  justify-self: right;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  display: block;
+}
+.foodinfo-box-restaurant .address .address-right p, .foodinfo-box-restaurant .address .hour-right p, .foodinfo-box-restaurant .hour .address-right p, .foodinfo-box-restaurant .hour .hour-right p {
+  margin: 0;
+  padding: 0;
+  font-size: .9rem;
+}
+.foodinfo-box-restaurant .address .address-right p:nth-of-type(3), .foodinfo-box-restaurant .address .hour-right p:nth-of-type(3), .foodinfo-box-restaurant .hour .address-right p:nth-of-type(3), .foodinfo-box-restaurant .hour .hour-right p:nth-of-type(3) {
+  color: #959595;
+  margin-bottom: 1rem;
+}
+.foodinfo-box-restaurant .address .hour-right, .foodinfo-box-restaurant .hour .hour-right {
+  margin-top: 1.5rem;
+}
+.foodinfo-box-restaurant .address .hour-right p:nth-of-type(1), .foodinfo-box-restaurant .hour .hour-right p:nth-of-type(1) {
+  color: #8FBA3D;
+}
+.foodinfo-box-restaurant .hour {
+  border-bottom: 0px;
+}
+
+body {
+  margin: 0;
+  /* background-image: url("../images/salad.jpg"), linear-gradient(#ffa800, #f2398e); */
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to left, rgba(255, 168, 0, 0.8), rgba(242, 57, 142, 0.8)), url("../images/french-steak.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.main .wrapper {
+  height: auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 720px;
+  height: 100vh;
+  align-content: flex-start;
+  position: relative;
+}
+
+.logo {
+  margin: 0px auto;
+  margin-bottom: -230px;
+  width: 100px;
+  height: auto;
+  align-self: flex-end;
+}
+
+.logo-container {
+  background-color: white;
+  height: 400px;
+  width: 160px;
+  margin: 0 auto;
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-self: flex-start;
+  justify-content: center;
+  display: flex;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 500px;
+  margin: 0px auto;
+}
+
+input, label, .submit {
+  padding: 18px;
+  box-sizing: border-box;
+  background-color: rgba(95, 10, 29, 0.35);
+  border: 0px solid rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.submit {
+  font-family: 'Asap', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #a493ff, #f2398e);
+  filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.1));
+}
+
+.submit:focus {
+  outline: none;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(250, 250, 250, 0.8);
+  font-size: 0.8rem;
+}
+
+.error, .passworderror, .passwordlength {
+  color: white;
+  padding-left: 10px;
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(250, 250, 250, 0.9);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid rgba(250, 250, 250, 0.8);
+}
+
+.signup_form {
+  margin-top: 200px;
+}
+
+.meta {
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(250, 250, 250, 0.8);
+}
+
+.meta div {
+  padding: 10px;
+  line-height: 0.9rem;
+}
+.meta div p {
+  margin: 0;
+}
+
+.guest {
+  border: 1px solid white;
+  margin: 0 10px;
+  margin-top: 1rem;
+  padding: 1rem 0 !important;
+  border-radius: 10px;
+  display: block;
+}
+
+/******************************************/
+/*                                        */
+/* MAIN PAGE                              */
+/*                                        */
+/******************************************/
+/* Modifications: styling                 */
+/*                                        */
+/* by: Felipe                             */
+/******************************************/
+body.main {
+  color: black;
+  background: linear-gradient(to top, white, transparent 50%), linear-gradient(to right, #f2398e, #ffa800);
+  background-size: 100vw 30vh, 100vw 30vh;
+  background-repeat: no-repeat;
+  max-height: 80vh;
+  position: relative;
+}
+
+/*******************************/
+/* Header                      */
+/*******************************/
+.main header {
+  width: 80vw;
+  padding-top: 40px;
+  margin: 0px auto 20px auto;
+  left: 50%;
+  margin-left: -40vw;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  z-index: 10;
+}
+.main header nav {
+  grid-column: 1;
+  justify-self: left;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.main header nav i {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: .5rem;
+}
+.main header h1 {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  grid-column: 2;
+  margin: 0;
+  padding: 0;
+}
+
+/*******************************/
+/* Ingredients                 */
+/*******************************/
+.ingredients {
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 85vw;
+}
+.ingredients a {
+  color: white;
+  background-color: #a493ff;
+  text-transform: uppercase;
+  padding: .5rem .8rem;
+  margin: 0 .3rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 3vw;
+  display: block;
+}
+
+/*******************************/
+/* Main Navigation Bottom      */
+/*******************************/
+.main-nav-bottom {
+  width: 80vw;
+  border-top: 3px solid #FFE8D7;
+  margin: 0 auto;
+  padding-top: 3vh;
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  margin-left: -40vw;
+}
+.main-nav-bottom ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.main-nav-bottom li {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+}
+.main-nav-bottom object {
+  height: 1.8rem;
+  display: block;
+  margin: 0 auto;
+}
+.main-nav-bottom a {
+  color: #f2398e;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-top: .8rem;
+  font-size: .7rem;
+  opacity: .7;
+  color: #F55E6C;
+}
+
+/*******************************/
+/* Favorite Tag                */
+/*******************************/
+.favorite-tag {
+  position: absolute;
+  top: 0;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.add-favorite object {
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.5));
+  animation-name: add-favorite;
+  animation-duration: .5s;
+  animation-timing-function: cubic-bezier(0, 0, 0, 0.99);
+  fill: blue;
+}
+
+@keyframes add-favorite {
+  0% {
+    transform: rotate(-200deg) scale(0);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+.fooditem {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding-top: 15vh;
+}
+
+.fooditem > div {
+  position: relative;
+  height: 68vh;
+}
+.fooditem > div h2 {
+  position: absolute;
+  width: 70vw;
+  display: flex;
+  bottom: 5rem;
+  padding: 0 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 5vw;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.5));
+}
+
+img {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
+}
+
+.fooditem .slick-slide img {
+  opacity: 0.7;
+  border-radius: 2%;
+  transform: scale(0.85);
+  animation-name: toNormal;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+}
+.fooditem .slick-active img {
+  opacity: 1;
+  transform: scale(1);
+  animation-name: toActive;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+}
+.fooditem .slick-slide h2 {
+  opacity: 0;
+}
+.fooditem .slick-active h2 {
+  animation-name: toActiveName;
+  animation-duration: .45s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier();
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+@keyframes toActiveName {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes toActive {
+  0% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes toNormal {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.85);
+  }
+}
+/*******************************/
+/* ingredients animation       */
+/*******************************/
+.slick-slide .ingredients a {
+  opacity: 0;
+}
+
+.slick-active .ingredients a {
+  opacity: 1;
+  animation-name: toActiveIngredients;
+  animation-duration: .55s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier();
+}
+.slick-active .ingredients a:nth-of-type(2) {
+  opacity: 1;
+  animation-name: toActiveIngredients;
+  animation-duration: .75s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier();
+}
+.slick-active .ingredients a:nth-of-type(3) {
+  opacity: 1;
+  animation-name: toActiveIngredients;
+  animation-duration: .95s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier();
+}
+.slick-active .ingredients a:nth-of-type(4) {
+  opacity: 1;
+  animation-name: toActiveIngredients;
+  animation-duration: 1.05s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier();
+}
+
+@keyframes toActiveIngredients {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*******************************/
+/* Main Navigation Bottom      */
+/*******************************/
+.nav-bottom:active {
+  animation-name: navAnimation;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+@keyframes navAnimation {
+  0% {
+    transform: scale(1, 1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(0.9, 0.9);
+    filter: brightness(0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+    filter: brightness(1);
+    display: none;
+  }
+}
+/*******************************/
+/*******************************/
+/* Animation from Main to Info */
+/*******************************/
+/*******************************/
+.toInfo {
+  animation-name: toInfoAnim;
+  animation-duration: .2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes toInfoAnim {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+.toInfo-2 {
+  animation-name: toInfoAnim;
+  animation-duration: .3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes toInfoAnim {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+/*******************************/
+/*******************************/
+/* Animation from Info to Main */
+/*******************************/
+/*******************************/
+.toMain {
+  animation-name: toMainAnim;
+  animation-duration: .2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes toMainAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.toMain-2 {
+  animation-name: toMainAnim;
+  animation-duration: .3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+/*******************************/
+/*******************************/
+/* Restaurant Info Animations */
+/*******************************/
+/*******************************/
+.foodinfo-anim-01 {
+  animation-name: foodinfoanim;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+.foodinfo-anim-01 h2 {
+  animation-name: foodinfoanimitem;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+}
+
+.foodinfo-anim-02 {
+  animation-name: foodinfoanimitem;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes foodinfoanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@keyframes foodinfoanimitem {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0px);
+  }
+}
+.menu-to-info {
+  animation-name: menu-entering;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  transform: translateX(1rem);
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes menu-entering {
+  0% {
+    transform: translateX(-1.6rem);
+  }
+  100% {
+    transform: translateX(1rem);
+  }
+}
+#menu, #goback {
+  clear: both;
+}
+
+.goback-to-info {
+  animation-name: goback-entering;
+  animation-duration: .4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes goback-entering {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.foodinfo-anim-reverse-01 {
+  animation-name: foodinfoanim-reverse;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  opacity: 0;
+}
+.foodinfo-anim-reverse-01 h2 {
+  animation-name: foodinfoanimitem-reverse;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+.foodinfo-anim-reverse-02 {
+  animation-name: foodinfoanimitem-reverse;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+
+@keyframes foodinfoanim-reverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes foodinfoanimitem-reverse {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+.menu-to-info-reverse {
+  animation-name: menu-entering-reverse;
+  animation-duration: .4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes menu-entering-reverse {
+  0% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(-1.6rem);
+  }
+}
+.goback-to-info-reverse {
+  animation-name: goback-entering-reverse;
+  animation-duration: .4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes goback-entering-reverse {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+}
+/*****************************************/
+/*****************************************/
+/* Animation from splash screen to login */
+/*****************************************/
+/*****************************************/
+.logo-container-anim {
+  z-index: 200;
+  animation-name: login-first-anim;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.8, 0, 0.17, 1);
+}
+
+@keyframes login-first-anim {
+  0% {
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  60% {
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  100% {
+    transform: translateX(-50%);
+    top: -200px;
+    height: 400px;
+    width: 160px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+.logo-anim {
+  z-index: 200;
+  animation-name: logo-anim;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.8, 0, 0.17, 1);
+}
+
+@keyframes logo-anim {
+  0% {
+    opacity: 0;
+    margin-bottom: -10px;
+    transform: scale(1.5);
+  }
+  55% {
+    opacity: 1;
+    margin-bottom: -10px;
+    transform: scale(1.5);
+  }
+  100% {
+    margin-bottom: -230px;
+    transform: scale(1);
+  }
+}
+.signup_form-anim {
+  animation-name: form-anim;
+  animation-duration: 1.1s;
+  animation-delay: 1.9s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0, 0.13, 1);
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.delay1 {
+  animation-delay: 2s;
+}
+
+.delay2 {
+  animation-delay: 2.1s;
+}
+
+.delay3 {
+  animation-delay: 2.2s;
+}
+
+.delay4 {
+  animation-delay: 2.3s;
+}
+
+.delay5 {
+  animation-delay: 2.4s;
+}
+
+@keyframes form-anim {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+body.tutorial {
+  color: black;
+  background: linear-gradient(to top, white, transparent 100%), linear-gradient(to right, #f2398e, #ffa800);
+  background-size: 100vw 10vh, 100vw 10vh;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  position: relative;
+  animation-name: body-tutorial;
+  animation-duration: .7s;
+  animation-delay: .3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+
+@keyframes body-tutorial {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.tutorial-images {
+  padding-top: 10vh;
+  height: 100vh;
+  position: relative;
+}
+.tutorial-images img {
+  max-width: 80vw;
+  height: auto;
+  margin: 0 auto;
+}
+.tutorial-images .slick-active .tutorial-title {
+  animation-name: tutorial-anim-img;
+  animation-duration: .5s;
+  animation-delay: .1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+.tutorial-images .slick-active p {
+  animation-name: tutorial-anim-img;
+  animation-duration: .5s;
+  animation-delay: .2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+.tutorial-images .slick-active a {
+  animation-name: tutorial-anim-img;
+  animation-duration: .5s;
+  animation-delay: .3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+.tutorial-images .slick-dots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 20vw;
+  margin: 0 auto;
+  list-style-type: none;
+  padding-left: 0;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -9vw;
+}
+.tutorial-images .slick-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 10px 10px;
+  background-color: lightgrey;
+  border: 0;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+.tutorial-images .slick-dots .slick-active {
+  animation-name: tutorial-anim-dots;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+.tutorial-images .slick-dots .slick-active button {
+  background-color: #f2398e;
+}
+@keyframes tutorial-anim-dots {
+  0% {
+    transform: translateY(-5px);
+  }
+  30% {
+    transition: translateY(50px);
+  }
+  100% {
+    transition: translateY(0px);
+  }
+}
+@keyframes tutorial-anim-img {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.tutorial-images .tutorial-title {
+  text-align: center;
+  font-family: "asap", verdana, helvetica, arial, sans-serif;
+  color: #333;
+  opacity: 0;
+}
+.tutorial-images p {
+  max-width: 60vw;
+  color: #888;
+  margin: 0 auto;
+  font-size: .95rem;
+  text-align: center;
+  line-height: 1.7rem;
+  opacity: 0;
+}
+.tutorial-images a {
+  opacity: 0;
+  border-radius: 10px;
+  display: block;
+  max-width: 80vh;
+  margin: 0vh 10vh;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Asap', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  background: linear-gradient(to right, #a493ff, #f2398e);
+  filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.2));
+}
+
+/******************************************/
+/*                                        */
+/* MENU                                   */
+/*                                        */
+/******************************************/
+/* Modifications: styling                 */
+/*                                        */
+/* by: Felipe                             */
+/******************************************/
+#menu {
+  z-index: 300;
+}
+
+.menu-icon-on {
+  color: #F55D6A !important;
+  transition: .5s;
+}
+
+.menu {
+  position: absolute;
+  left: -12vw;
+  z-index: 100;
+  width: 1px;
+  height: 1px;
+  background: #FFF;
+  border-radius: 50% 50% 50% 50%;
+  transition: .3s ease-out;
+  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+  cursor: pointer;
+  opacity: .95;
+}
+
+.menu-on {
+  box-shadow: 0 0 0 100vw #FFF, 0 0 0 150vh #FFF;
+  border-radius: 0;
+  opacity: .95;
+  transition: .4s ease-in;
+}
+
+.event-blocker {
+  pointer-events: none;
+}
+
+.menu-items-on {
+  z-index: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-items-on li {
+  text-align: center;
+  padding: 1rem 0;
+  animation-name: menu-items-on-anim;
+  animation-fill-mode: forwards;
+  animation-delay: .1s;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  opacity: 0;
+}
+.menu-items-on a {
+  font-family: "asap", verdana, helvetica, arial, sans-serif;
+  font-weight: bold;
+  color: #F55D6A;
+}
+.menu-items-on li:nth-of-type(5) {
+  animation-delay: .15s;
+}
+.menu-items-on li:nth-of-type(4) {
+  animation-delay: .20s;
+}
+.menu-items-on li:nth-of-type(3) {
+  animation-delay: .25s;
+}
+.menu-items-on li:nth-of-type(2) {
+  animation-delay: .30s;
+}
+.menu-items-on li:nth-of-type(1) {
+  animation-delay: .35s;
+}
+
+@keyframes menu-items-on-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes menu-items-on-anim2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.menu-items-off {
+  position: absolute;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

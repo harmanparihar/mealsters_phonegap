@@ -1,0 +1,360 @@
+/*******************************/
+/* Main Navigation Bottom      */
+/*******************************/
+
+
+.nav-bottom:active {
+        animation-name: navAnimation;
+        animation-duration: .3s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+}
+
+
+
+// animation on the buttons
+@keyframes navAnimation {
+    0% {
+        transform: scale(1,1);
+        filter: brightness(1);
+    } 50% {
+        transform: scale(.9,.9);
+        filter: brightness(0.5);
+    } 100% {
+        transform: scale(1,1);
+        filter: brightness(1);
+        display: none;
+    }
+
+}
+
+/*******************************/
+/*******************************/
+/* Animation from Main to Info */
+/*******************************/
+/*******************************/
+
+.toInfo {
+    // opacity: 0;
+    animation-name: toInfoAnim;
+    animation-duration: .2s;
+    animation-timing-function:ease-in;
+    animation-iteration-count: 1;
+}
+@keyframes toInfoAnim {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+
+    } 100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+.toInfo-2 {
+    // opacity: 0;
+    animation-name: toInfoAnim;
+    animation-duration: .3s;
+    animation-timing-function:ease-in;
+    animation-iteration-count: 1;
+}
+@keyframes toInfoAnim {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+
+    } 100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+
+/*******************************/
+/*******************************/
+/* Animation from Info to Main */
+/*******************************/
+/*******************************/
+
+.toMain {
+    // opacity: 0;
+    animation-name: toMainAnim;
+    animation-duration: .2s;
+    animation-timing-function:ease-out;
+    animation-iteration-count: 1;
+}
+@keyframes toMainAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+
+    } 100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.toMain-2 {
+    // opacity: 0;
+    animation-name: toMainAnim;
+    animation-duration: .3s;
+    animation-timing-function:ease-out;
+    animation-iteration-count: 1;
+}
+
+
+
+
+
+
+
+
+
+/*******************************/
+/*******************************/
+/* Restaurant Info Animations */
+/*******************************/
+/*******************************/
+
+
+
+// ANIMATIONS
+
+.foodinfo-anim-01 {
+    animation-name: foodinfoanim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+
+    h2 {
+        animation-name: foodinfoanimitem;
+        animation-duration: .3s;
+        animation-iteration-count: 1;
+    }
+}
+.foodinfo-anim-02 {
+    animation-name: foodinfoanimitem;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+}
+@keyframes foodinfoanim {
+    0% {
+        opacity: 0;
+
+    } 100% {
+        opacity: 100;
+    }
+}
+@keyframes foodinfoanimitem {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+
+    } 100% {
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
+
+
+
+// top buttons animations
+
+.menu-to-info {
+    animation-name: menu-entering;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    transform: translateX(1rem);
+    animation-timing-function: ease-in-out;
+}
+@keyframes menu-entering {
+    0% {
+        transform: translateX(-1.6rem);
+    } 100% {
+        transform: translateX(1rem);
+    }
+}
+
+#menu, #goback {
+    clear: both;
+}
+
+.goback-to-info {
+    animation-name: goback-entering;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+@keyframes goback-entering {
+    0% {
+        transform: translateX(-60px);
+        opacity: 0;
+    } 100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+
+// REVERSE ANIMATIONS
+
+.foodinfo-anim-reverse-01 {
+    animation-name: foodinfoanim-reverse;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function:ease-in;
+    opacity: 0;
+
+    h2 {
+        animation-name: foodinfoanimitem-reverse;
+        animation-duration: .3s;
+        animation-iteration-count: 1;
+        animation-timing-function:ease-in;
+        opacity: 0;
+    }
+}
+.foodinfo-anim-reverse-02 {
+    animation-name: foodinfoanimitem-reverse;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function:ease-in;
+}
+@keyframes foodinfoanim-reverse {
+    0% {
+        opacity: 1;
+
+    } 100% {
+        opacity: 0;
+    }
+}
+@keyframes foodinfoanimitem-reverse {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+
+    } 100% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+
+
+
+// BUTTONS REVERSE ANIMATION
+
+.menu-to-info-reverse {
+    animation-name: menu-entering-reverse;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+    // transform: translateX(-1.6rem);
+    animation-timing-function: ease-in-out;
+}
+@keyframes menu-entering-reverse {
+    0% {
+        transform: translateX(1rem);
+    } 100% {
+        transform: translateX(-1.6rem);
+    }
+}
+
+
+.goback-to-info-reverse {
+    animation-name: goback-entering-reverse;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+@keyframes goback-entering-reverse {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    } 100% {
+        transform: translateX(-60px);
+        opacity: 0;
+    }
+}
+
+
+
+
+/*****************************************/
+/*****************************************/
+/* Animation from splash screen to login */
+/*****************************************/
+/*****************************************/
+
+.logo-container-anim {
+    z-index: 200;
+    animation-name: login-first-anim;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.80, 0, .17, 1);
+}
+@keyframes login-first-anim {
+    0% {
+        top: 0px;
+        height: 100vh;
+        width: 100vw;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    } 60% {
+        top: 0px;
+        height: 100vh;
+        width: 100vw;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    } 100% {
+        transform: translateX(-50%);
+        top:-200px;
+        height: 400px;
+        width: 160px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+.logo-anim {
+    z-index: 200;
+    animation-name: logo-anim;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.80, 0, .17, 1);
+}
+
+@keyframes logo-anim {
+    0% {
+        opacity: 0;
+         margin-bottom: -10px;
+         transform: scale(1.5);
+    } 55% {
+        opacity: 1;
+         margin-bottom: -10px;
+         transform: scale(1.5);
+    } 100% {
+         margin-bottom: -230px;
+         transform: scale(1);
+    }
+}
+.signup_form-anim {
+    animation-name: form-anim;
+    animation-duration: 1.1s;
+    animation-delay: 1.9s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0,0,.13,1);
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+.delay1 {animation-delay: 2s;}
+.delay2 {animation-delay: 2.1s;}
+.delay3 {animation-delay: 2.2s;}
+.delay4 {animation-delay: 2.3s;}
+.delay5 {animation-delay: 2.4s;}
+
+@keyframes form-anim {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    } 100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

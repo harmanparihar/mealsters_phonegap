@@ -1,0 +1,162 @@
+.fooditem {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding-top: 15vh;
+}
+
+.fooditem>div {
+    position: relative;
+    height: 68vh;
+
+    h2 {
+        position: absolute;
+        width: 70vw;
+        display: flex;
+        bottom: 5rem;
+        padding: 0 20px;
+        color: white;
+        font-weight: bold;
+        font-size: 5vw;
+        filter: drop-shadow(0px 3px 2px hsla(120,0%,0%,.5));
+        // right: 20px;
+
+    }
+}
+img {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+}
+.fooditem {
+
+
+    .slick-slide img {
+        opacity: 0.7;
+        border-radius: 2%;
+        transform: scale(.85);
+        // filter: blur(1px);
+        animation-name: toNormal;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+        // filter: drop-shadow(0px 1px 2px hsla(120,0%,0%,.6));
+
+    }
+
+    .slick-active img {
+        opacity: 1;
+        transform: scale(1.0);
+        // filter: blur(0px);
+        animation-name: toActive;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+        // filter: drop-shadow(0px 8px 6px hsla(120,0%,0%,.3));
+
+    }
+
+    .slick-slide h2 {
+        opacity: 0;
+    }
+    .slick-active h2 {
+        animation-name: toActiveName;
+        animation-duration: .45s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier();
+        opacity: 1;
+        transform: translateY(00%);
+
+    }
+}
+@keyframes toActiveName {
+    0% {
+        opacity: 0;
+    } 30% {
+        opacity: 0;
+        transform: translateY(50%);
+    } 100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+@keyframes toActive {
+    0% {
+        transform: scale(0.85);
+        // filter: blur(1px);
+        // filter: drop-shadow(0px 1px 2px hsla(120,0%,0%,.6));
+    } 100% {
+        transform: scale(1.0);
+        // filter: blur(0);
+        // filter: drop-shadow(0px 8px 6px hsla(120,0%,0%,.3));
+    }
+}
+@keyframes toNormal {
+    0% {
+        transform: scale(1.0);
+        // filter: blur(0);
+        // filter: drop-shadow(0px 8px 6px hsla(120,0%,0%,.3));
+
+    } 100% {
+        transform: scale(0.85);
+        // filter: blur(2px);
+        // filter: drop-shadow(0px 1px 2px hsla(120,0%,0%,.6));
+    }
+}
+
+
+
+
+
+
+
+
+/*******************************/
+/* ingredients animation       */
+/*******************************/
+.slick-slide .ingredients a {
+    opacity: 0;
+}
+.slick-active .ingredients {
+    a {
+        opacity: 1;
+
+        animation-name: toActiveIngredients;
+        animation-duration: .55s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier();
+    }
+    a:nth-of-type(2) {
+        opacity: 1;
+
+        animation-name: toActiveIngredients;
+        animation-duration: .75s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier();
+    }
+    a:nth-of-type(3) {
+        opacity: 1;
+
+        animation-name: toActiveIngredients;
+        animation-duration: .95s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier();
+    }
+    a:nth-of-type(4) {
+        opacity: 1;
+
+        animation-name: toActiveIngredients;
+        animation-duration: 1.05s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier();
+    }
+}
+@keyframes toActiveIngredients {
+    0% {
+        opacity: 0;
+    } 30% {
+        opacity: 0;
+        transform: translateY(50%);
+    } 100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}

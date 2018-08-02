@@ -1,0 +1,14 @@
+{
+  "name": "appppp",
+  "version": "1.0.0",
+  "displayName": "app",
+  "cordova": {
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {
+    "cordova-android": "^7.1.1",
+    "cordova-ios": "^4.5.5"
+  }
+}

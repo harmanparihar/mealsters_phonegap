@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!------------------------------->
+    <!-- main css ------------------->
+    <!------------------------------->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!------------------------------->
+    <!-- font awesome --------------->
+    <!------------------------------->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <!--including firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="js/firebase.js"></script>
+
+    <!------------------------------->
+    <!--including jquery cdn--------->
+    <!------------------------------->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+
+
+    <!------------------------------->
+    <!--including firebase ---------->
+    <!------------------------------->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="js/firebase.js"></script>
+    <!-- <script src="js/database1.js"></script> -->
+
+
+    <!------------------------------->
+    <!-- main carousel: slick ------->
+    <!------------------------------->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+    <!-- carousel personal configs -->
+    <script src="js/main-carousel.js"></script>
+
+    <!-- jQuery Migrate - not sure if we need for carousel -->
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+    <!-- carousel library -->
+    <script type="text/javascript" src="slick/slick.js"></script>
+
+  <script src="js/database1.js"></script>
+    <!------------------------------->
+    <!-- Animations File  ----------->
+    <!------------------------------->
+    <script src="js/animations.js"></script>
+
+
+    <!------------------------------->
+    <!-- For swipe detection  ----------->
+    <!------------------------------->
+
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <!------------------------------->
+
+    <style media="screen">
+        html,body{overflow-y: scroll; }
+
+    </style>
+
+    <script src="cordova.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/nacl-util.min.js"></script>
+    <script src="js/nacl-fast.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/deploy.js"></script>
+    <script src="js/analytic.js"></script>
+
+
+    <title>Mealsters</title>
+</head>
+<body class="main">
+    <!-- <div class="menu-items"> -->
+        <ul class="menu-items-off" id="menu-items">
+            <li><a href="#">FILTERS</a></li>
+            <li><a href="#">FAVORITES</a></li>
+            <li><a href="#">ACCOUNT</a></li>
+            <li><a href="#">NOTIFICATIONS</a></li>
+            <li><a href="#">SUPPORT</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    <!-- </div> -->
+
+    <header>
+        <nav>
+            <i class="fas fa-arrow-left" id="goback" style="display:none"></i>
+            <i class="menu_icon fas fa-bars" id="menu" style="display:block"></i>
+            <span class="menu"></span>
+
+
+        </nav>
+        <h1 id="name-main">Mealsters</h1>
+    </header>
+
+    <!------------------------------->
+    <!-- carousel structure: slick -->
+    <!------------------------------->
+    <section class="main-section">
+
+
+        <div class="fooditem">
+          <div class="1"><img class="img_space" alt="">
+              <h2 class="name"></h2>
+
+              <div class="ingredients fouringredients">
+
+              </div>
+          </div>
+            <div class="2"><img class="img_space" alt="">
+                <h2 class="name"></h2>
+
+                <div class="ingredients fouringredients">
+
+                </div>
+            </div>
+            <div class="3"><img class="img_space" alt="">
+                <h2 class="name"></h2>
+
+                <div class="ingredients fouringredients">
+
+                </div>
+            </div>
+
+        </div>
+        <!-- end of carousel structure -->
+
+        <nav class="main-nav-bottom">
+            <ul>
+                <!-- <li>
+                <object data="images/Assets/left-arrow-icon.svg" type="image/svg+xml"></object>
+                <a href="#">previous</a>
+            </li> -->
+            <li id="gofoodinfo">
+                <object data="images/Assets/info-icon.svg" type="image/svg+xml"></object>
+                <a href="#">info</a>
+            </li>
+            <li>
+                <object data="images/Assets/favorite-icon.svg" type="image/svg+xml"></object>
+                <a href="#">Favorite</a>
+            </li>
+            <!-- <li>
+            <object data="images/Assets/right-arrow-icon.svg" type="image/svg+xml"></object>
+            <a href="#">next</a>
+        </li> -->
+    </ul>
+</nav>
+</section>
+
+<section class="foodinfo" style="display:none">
+
+    <div class="foodinfo-image"></div>
+    <h2></h2>
+
+    <div class="foodinfo-wrapper">
+
+
+        <!------------------------------->
+        <!-- ingredients box ------------>
+        <!------------------------------->
+        <div class="foodinfo-box-ingredients" id="infobox1" style="opacity:0">
+            <div class="ingredients completeingredients">
+
+            </div>
+
+        </div>
+
+        <!------------------------------->
+        <!-- price box ------------------>
+        <!------------------------------->
+        <div class="foodinfo-box-price" id="infobox2" style="opacity:0">
+
+            <!-- price left ------------------>
+            <div class="price-left name-icon-left">
+                <img src="images/assets/price-icon.png" alt="">
+                <h4>PRICE</h4>
+            </div>
+
+            <!-- price right ----------------->
+            <div class="price-right">
+                <h3 class="price"></h3>
+                <h4>+TAXES</h4>
+            </div>
+        </div>
+
+        <!------------------------------------------->
+        <!-- telephone/website box ------------------>
+        <!------------------------------------------->
+        <div class="foodinfo-box-contact" id="infobox3" style="opacity:0">
+            <a class="res_tel"><div class="telephone">
+                <img src="images/assets/phone-icon@2x.png" alt="">
+                <h4>TELEPHONE</h4>
+            </div></a>
+
+            <a class="res_website"><div class="website">
+                <img src="images/assets/website-icon@2x.png" alt="">
+                <h4>WEBSITE</h4>
+            </div></a>
+        </div>
+
+        <div class="foodinfo-box-restaurant" id="infobox4" style="opacity:0">
+            <div class="restaurant-image">
+
+                <h4 class="res_name"></h4>
+                <!-- <h5>Gourmet Burgers</h5> -->
+            </div>
+
+            <div class="review">
+                <div class="review-left name-icon-left">
+                    <img src="images/assets/review-icon.png" alt="">
+                    <h4>REVIEW</h4>
+                </div>
+
+                <div class="review-right">
+                    <object data="images/Assets/star-selected.svg" type="image/svg+xml"></object>
+                    <object data="images/Assets/star-selected.svg" type="image/svg+xml"></object>
+                    <object data="images/Assets/star-selected.svg" type="image/svg+xml"></object>
+                    <object data="images/Assets/star-selected.svg" type="image/svg+xml"></object>
+                    <object data="images/Assets/star-not-selected.svg" type="image/svg+xml"></object>
+                </div>
+            </div>
+
+            <div class="address">
+                <div class="address-left name-icon-left">
+                    <img src="images/assets/address-icon@2x.png" alt="">
+                    <h4>ADDRESS</h4>
+                </div>
+
+                <div class="res_address_text address-right">
+
+                </div>
+            </div>
+
+            <div class="hour">
+                <div class="hour-left name-icon-left">
+                    <img src="images/assets/hour-icon@2x.png" alt="">
+                    <h4>HOUR</h4>
+                </div>
+
+                <div class="hour-right">
+                    <p>Opened</p>
+                    <p>11:00 - 22:00</p>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

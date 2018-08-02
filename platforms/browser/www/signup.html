@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mealsters | Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <!--including firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+  <script type="text/javascript" src="js/hmac-md5.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/signup.js"></script>
+  <script src="cordova.js"></script>
+  <script src="js/zepto.min.js"></script>
+  <script src="js/nacl-util.min.js"></script>
+  <script src="js/nacl-fast.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/deploy.js"></script>
+  <script src="js/analytic.js"></script>
+</head>
+<body>
+  <div class="signup wrapper">
+    <div class="logo-container">
+    <img class="logo" src="images/mealsters-vertical.png" alt="Logo">
+    </div>
+    <form action="POST" class="signup_form">
+      <!-- <div class="page-heading">Sign Up Today</div> -->
+      <input placeholder="Enter Email Id" type="email" id="username" required>
+      <span class="error"></span>
+      <input placeholder="Enter Password" type="password" id="password" required>
+      <span class="passwordlength"></span>
+      <input placeholder="Re-enter Your Password" type="password" id="password2" required>
+      <span class="passworderror"></span>
+      <button type="submit" class="submit">Sign Up</button>
+    </form>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+body{
+  margin:0;
+  /* background-image: url("../images/salad.jpg"), linear-gradient(#ffa800, #f2398e); */
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to left, rgba(255, 168, 0,0.8), rgba(242, 57, 142,0.8)), url("../images/french-steak.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height:100vh;
+}
+
+.main .wrapper{
+  height: auto;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 720px;
+  // max-width: 100%;
+  height: 100vh;
+  align-content: flex-start;
+  position: relative;
+}
+
+.logo{
+  margin: 0px auto;
+  margin-bottom: -230px;
+  width:100px;
+  height: auto;
+  align-self: flex-end;
+}
+
+
+.logo-container{
+  background-color: white;
+  height: 400px;
+  width: 160px;
+  margin: 0 auto;
+  position: absolute;
+  top:-200px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-self: flex-start;
+  justify-content: center;
+  display: flex;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  flex-direction: column;
+}
+.signup .logo-container{
+  // top:-116px;
+}
+
+
+
+form{
+  display:flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 500px;
+  margin:0px auto;
+}
+
+input, label, .submit{
+  padding:18px;
+  box-sizing: border-box;
+  background-color: rgba(95,10,29,0.35);
+  border: 0px solid rgba(0,0,0,0.2);
+  margin: 10px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  color:white;
+}
+.submit {
+  font-family: 'Asap', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(to right,#a493ff , #f2398e);
+  filter: drop-shadow(0px 5px 2px hsla(120,0%,0%,.1));
+ }
+.submit:focus{
+  outline: none;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(250,250,250,0.8);
+    font-size: 0.8rem;
+}
+.error, .passworderror, .passwordlength{
+  color:white;
+  padding-left:10px;
+  font-size: 0.9rem;
+}
+a{
+  text-decoration: none;
+  color: rgba(250,250,250,0.9);
+}
+input:focus {
+    outline: none;
+    border: 1px solid rgba(250,250,250,0.8);
+}
+.signup_form{
+  margin-top: 200px;
+}
+
+.meta{
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(250,250,250,0.8);
+
+}
+.meta div{
+  padding: 10px;
+  line-height: 0.9rem;
+
+  p {
+      margin: 0;
+  }
+}
+
+.guest {
+    border: 1px solid white;
+    margin: 0 10px;
+    margin-top: 1rem;
+    padding: 1rem 0 !important;
+    border-radius: 10px;
+    display: block;
+}

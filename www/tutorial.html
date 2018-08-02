@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!------------------------------->
+    <!--including jquery cdn--------->
+    <!------------------------------->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <!------------------------------->
+    <!-- main css ------------------->
+    <!------------------------------->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!------------------------------->
+    <!-- main carousel: slick ------->
+    <!------------------------------->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+
+    <!-- carousel library -->
+    <script type="text/javascript" src="slick/slick.js"></script>
+
+
+
+    <meta charset="UTF-8">
+
+
+    <script type="text/javascript">
+    $(function() {
+
+
+        $('.tutorial-images').slick({
+            infinite: true,
+            draggable: true,
+            dots: true,
+            arrows: false,
+            // centerMode: true,
+        });
+
+    });
+    </script>
+
+
+
+</head>
+<body class="tutorial">
+
+
+    <div class="tutorial-images">
+        <div>
+            <img src="images/Assets/swipe-left.gif" alt="">
+            <h2 class="tutorial-title">Swipe Left</h2>
+            <p>Or click in the left arrow to go to the next food option.</p>
+
+
+        </div>
+
+        <div>
+            <img src="images/Assets/swipe-right.gif" alt="">
+            <h2 class="tutorial-title">Swipe Right</h2>
+            <p>Or click in the right arrow if you want to go back to the previous food option.</p>
+        </div>
+
+        <div>
+            <img src="images/Assets/swipe-up.gif" alt="">
+            <h2 class="tutorial-title">Swipe Up</h2>
+            <p>Or click in the Info button to check all the information about the food and how to get it.</p>
+
+            <a href="mainpage.html">Take me to the food!</a>
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>

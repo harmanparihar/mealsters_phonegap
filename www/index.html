@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mealsters</title>
+
+    <!------------------------------->
+    <!--including jquery cdn--------->
+    <!------------------------------->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <style media="screen">
+
+    body {
+        margin: 0;
+    }
+    video {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -10;
+    }
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+            setTimeout(function () {
+
+                window.location.replace("login.html")
+            },4800)
+        })
+    </script>
+
+</head>
+<body>
+    <video autoplay muted poster="header_img.png">
+        <source src="video/splash-screen.mp4" type="video/mp4">
+            <img src="header_img.png" alt="man playing guitar">
+        </video>
+    </body>
+    </html>
