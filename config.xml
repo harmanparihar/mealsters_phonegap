@@ -10,4 +10,9 @@
     <content src="index.html" />
     <access origin="*" />
     <engine name="ios" spec="~4.5.5" />
+    <access origin="http://www.domain.com" browserOnly="true" />
+    function loadURL(url){
+    navigator.app.loadUrl(url, { openExternal:true });
+ }
+  <a onclick="loadURL('http://www.domain.com')" href="#">Url</a>
 </widget>
