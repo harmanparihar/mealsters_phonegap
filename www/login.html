@@ -13,14 +13,6 @@
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
     <script src="js/firebase.js"></script>
     <script src="js/login.js"></script>
-    <script src="cordova.js"></script>
-    <script src="js/zepto.min.js"></script>
-    <script src="js/nacl-util.min.js"></script>
-    <script src="js/nacl-fast.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/deploy.js"></script>
-    <script src="js/analytic.js"></script>
-
 </head>
 <body>
     <div class="wrapper">
@@ -46,47 +38,5 @@
 
         </div>
     </div>
-
-
-
-
-
-    <script>
-  $(function(){
-    const user_ref= firebase.database().ref("/users");
-    $('form.signup_form').submit(function (event) {
-      event.preventDefault();
-      $(".err").html("");
-      let name= $("#username").val();
-      let pass= $("#password").val();
-      pass=CryptoJS.MD5(pass).words[0];
-      console.log(pass);
-      user_ref.orderByChild("username").equalTo(name).once("value",snapshot => {
-        const user = snapshot.val();
-        if (user){
-            console.log(user);
-            snapshot.forEach(function(data) {
-            console.log(data.key);
-            console.log(data.val().password);
-            console.log(data.val().username);
-
-            console.log("Hello");
-            if(data.val().password == pass){
-              document.location.href = "tutorial.html";
-            } else{
-                $(".passworderror").html("Wrong Password!");
-                console.log("Wrong Password entered");
-            }
-        });
-        }else{
-          console.log("user not valid");
-          $(".error").html("Enter a valid email id!");
-        }
-      });
-
-
-
-    })
-  });</script>
 </body>
 </html>
