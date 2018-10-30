@@ -1,4 +1,4 @@
-# A Blank PhoneGap App
+# Mealster - Phonegap App
 
 ## Usage
 
